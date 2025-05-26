@@ -1,0 +1,104 @@
+form
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .login-container a.forgot {
+      display: block;
+      margin-bottom: 20px;
+      color: #00a58c;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .login-container a.forgot:hover {
+      text-decoration: underline;
+    }
+
+    .login-container button {
+      width: 100%;
+      background-color: #00a58c;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #00846f;
+    }
+
+    .signup-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .signup-link a {
+      color: #00a58c;
+      text-decoration: none;
+      margin-left: 5px;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="email" placeholder="Enter your email" />
+    <input type="password" placeholder="Enter your password" />
+    <a href="" class="forgot">Forgot password?</a>
+    <button>Login</button>
+    <div class="signup-link">
+      Don't have an account? <a href="">Signup</a>
+    </div>
+  </div>
+</body>
+</html>

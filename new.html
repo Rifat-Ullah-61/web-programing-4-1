@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header header"
+        "advertise-left main-content sidebar advertise-right"
+        "advertise-left twin-left twin-right advertise-right"
+        "footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto 200px 150px auto;
+      gap: 10px;
+      padding: 10px;
+      height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #3399FF;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .advertise-left {
+      grid-area: advertise-left;
+      background-color: #FFCC33;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .advertise-right {
+      grid-area: advertise-right;
+      background-color: #FFCC33;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .main-content {
+      grid-area: main-content;
+      background-color: #66CC66;
+      padding: 20px;
+      text-align: center;
+    
+      
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #CC66CC;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .twin-left {
+      grid-area: twin-left;
+      background-color: #FF9933;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .twin-right {
+      grid-area: twin-right;
+      background-color: #FF9933;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #0066CC;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">.header</div>
+    <div class="advertise-left">.advertise</div>
+    <div class="main-content">.main-content</div>
+    <div class="sidebar">.sidebar</div>
+    <div class="advertise-right">.advertise</div>
+    <div class="twin-left">.twin</div>
+    <div class="twin-right">.twin</div>
+    <div class="footer">.footer</div>
+  </div>
+
+</body>
+</html>

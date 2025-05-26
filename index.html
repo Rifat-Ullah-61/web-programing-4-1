@@ -1,0 +1,144 @@
+navbar
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar with Submenu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #007bff;
+      padding: 15px 30px;
+      color: white;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding: 8px 12px;
+      display: block;
+    }
+
+    .nav-links li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Submenu */
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #0056b3;
+      min-width: 150px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    .submenu li {
+      width: 100%;
+    }
+
+    .submenu li a {
+      padding: 10px;
+    }
+
+    .nav-links li:hover .submenu {
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        background-color: #0056b3;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .submenu {
+        position: relative;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Rifat Ullah Khan</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/na.html">Grid</a></li>
+      <li><a href="#">About</a></li>
+      <li>
+        <a href="#">Achievement</a>
+        <ul class="submenu">
+          <li><a href="#">Certificates</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Awards</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
